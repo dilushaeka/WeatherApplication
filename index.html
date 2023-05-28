@@ -20,7 +20,7 @@
             <span id="modes"><button id="btnLight" type="button" class="btn btn-light" data-mdb-ripple-color="dark"><img src="assets/icons/lightmode.svg" alt="light"></button>
                              <button id="btnDark" type="button" class="btn btn-dark"><img src="assets/icons/darkmode.svg" alt="dark"></button>
             </span>
-            <p id="inputContainer"><input type="text" id="cityInput">
+            <p id="inputContainer"><input type="text" id="cityInput" placeholder="Enter city name">
               <button id="btnSearch"><img src="assets/icons/icons8-search-50.png" alt=""></button>
             </p>  
         </center> 
@@ -29,8 +29,31 @@
     <main class="container-fluid">
 
       <section id="whether-sec">
-
-      </section>
+        <div class="whether-outer">
+          <div class="whether">
+            <img src="assets/images/rain.png" alt="" class="whether-icon">
+            <h1 class="temp">22c</h1>
+            <h2 class="city">panadura</h2><br><br><br>
+            <div class="details">
+              <div class="col">
+                <img src="assets/images/humidity.png" alt="">
+                <div>
+                  <p class="humidity">12%</p>
+                  <p class="">Humidity</p>
+                </div>
+              </div>
+              <div class="col">
+                <img src="assets/images/wind.png" alt="">
+                <div>
+                  <p class="wind">12kmph</p>
+                  <p class="">Wind Speed</p>
+                </div>
+              </div>
+              </div>
+          </div>
+          </div>
+        </div>
+      </section> <br> <br>
       <section id="foreCast-big">
         <section class="foreCast" id="day1">
           <div class="card" style="color: #4B515D; border-radius: 35px;">
@@ -131,9 +154,6 @@
           </div>
         </section>
       </section>
-        
-        
-
     </main>
 
     <footer></footer>
