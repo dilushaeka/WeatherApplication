@@ -1,15 +1,11 @@
-/*====================== Common ==========================*/
+/*===================================================== Common ==========================*/
 *{
     padding: 0;
     margin: 0;
-    color: #ffffff;
+    /* color: #ffffff; */
 }
 
-body{
-    background-color:transparent;
-    border-radius: 7rem;
-    /* overflow: hidden;  */
-}
+
 
 header{
     background-color: rgb(59, 59, 86);
@@ -21,41 +17,50 @@ header{
     justify-content: flex-start;
 }
 
+
+/*===================================================== header ================*/
 #cityInput{
     border-radius: 5rem;
     width: 20vw;
     height: 3rem;
+    color: black;
+    padding: 2rem;
+
 }
 
 #city{
     width: fit-content;
     height: fit-content;
 }
+
+
+/*===================================================== Body ================*/
+
+body{
+    background-color:transparent;
+    border-radius: 7rem;
+    /* overflow: hidden;  */
+}
+
+/*======================================================= main ====================*/
 main{
 }
 
-
-footer{
-    background-color: black;
-}
-
-#whether-sec{
-    background-color: aqua;
-    height:max-content;
-    border-radius: 4rem;
-    border: 4px solid red;
-}
-
-#foreCast-big{
+/*====== main whether sec ======*/
+.main-whether-sec{
     display: flex;
-    flex-direction: row;
     justify-content: space-evenly;
-}
-.foreCast{
-    width: fit-content;
+    /* background-color: blueviolet; */
 }
 
-/*-=========== whether section ===========*/
+.main-whether-img{
+    background-size: contain;
+}
+
+
+
+
+/*-=========== whether section 1 ===========*/
 .whether{
     display: flex;
     justify-content:center;
@@ -106,9 +111,33 @@ footer{
     font-size: 1.8rem;
 }
 
+/*======================================================== footer ====================*/
+footer{
+    background-color: black;
+}
+
+.whether-sec{
+    /* background-color: aqua; */
+    height:max-content;
+    border-radius: 4rem;
+    border: 4px solid red;
+}
+
+#foreCast-big{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.foreCast{
+    width: fit-content;
+}
+
+
+
+
 /*============= forecast ===============*/
 
 #foreCast-big{
     display: flex;
-    
+
 }
