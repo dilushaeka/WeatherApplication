@@ -23,6 +23,13 @@ header{
     border-top-right-radius: 7rem; */
     color: white;
 }
+.btn-dark{
+    color: antiquewhite;
+    background-color: aliceblue;
+}
+.btn-dark:active{
+    background-color: aquamarine;
+}
 
 #modes{
     display: flex;
@@ -90,7 +97,7 @@ body{
     flex-direction: column;
     height: fit-content;
     width: 30vw;
-    border-radius: 6rem;
+    border-radius: 3rem;
     left: 100px;
     padding: 2rem;
     margin: 6rem;

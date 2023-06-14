@@ -18,7 +18,7 @@ $("#btnLight").on("click", () => {
 
 // ===================  fetch data   =============
 
-const apiUrl = "http://api.weatherapi.com/v1/";
+const apiUrl = "https://api.weatherapi.com/v1/";
 
 const searchBox = document.querySelector("#cityInput");
 const searchBtn = document.querySelector("#btnSearch");
