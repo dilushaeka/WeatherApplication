@@ -7,11 +7,20 @@
 
     <!-- link with css -->
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/normalize.css">
 
     
     <!-- Add boostrap css -->
     <link rel="stylesheet" href="css/bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css">
     <title>Whether Application</title>
+
+    <!-- AOS Css -->
+ <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+ <link
+ rel="stylesheet"
+ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
 </head>
 <body>
     <header >
@@ -21,38 +30,40 @@
                              <button id="btnDark" type="button" class="btn btn-dark"><img src="assets/icons/darkmode.svg" alt="dark"></button>
             </span>
             <p id="inputContainer"><input type="text" id="cityInput" placeholder="Enter city name">
-              <button id="btnSearch"><img src="assets/icons/icons8-search-50.png" alt=""></button>
-            </p>  
+              <button id="btnSearch"><img src="assets/icons/search.png" alt=""></button>
+            </p> 
+            <div class="error"><p>invalid City Name</p> </div>
         </center> 
     </header>
 
     <main class="container-fluid">
 
       <section class="main-whether-sec">
-        
-        <section class="whether-sec">
+        <section data-aos="flip-right"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="2000" class="whether-sec" id="whether-sec1">
           <div class="whether-outer">
-            <div class="whether">
-              <img src="" alt="" class="whether-icon">
-              <h1 class="temp">22c</h1>
-              <span class="text-Whether">part cloudy</span>
-              <h2 class="city">panadura</h2>
+            <div class="whether" id="whether1">
+              <img src="" alt="" class="whether-icon" id="whether-icon1">
+              <h1 class="temp"></h1>
+              <span class="text-Whether"></span>
+              <h2 class="city" ></h2>
               <h3 class="region"></h3>
               <h4 class="country"></h4>
               <br><br><br>
               <div class="details">
                 <div class="col">
-                  <img src="assets/images/humidity.png" alt="">
+                  <img class="hu-img" src="assets/images/humidity.png" alt="">
                   <div>
-                    <p class="humidity">12%</p>
-                    <p class="">Humidity</p>
+                    <p class="humidity"></p>
+                    <p class=""></p>
                   </div>
                 </div>
                 <div class="col">
-                  <img src="assets/images/wind.png" alt="">
+                  <img class="hu-img" src="assets/images/wind.png" alt="">
                   <div>
-                    <p class="wind">12kmph</p>
-                    <p class="">Wind Speed</p>
+                    <p class="wind"></p>
+                    <p class=""></p>
                   </div>
                 </div>
                 </div>
@@ -60,138 +71,255 @@
             </div>
           </div>
         </section>
-        <section class="whether-sec">
+        <section data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="2000" class="whether-sec" id="whether-sec2">
           <div class="whether-outer">
-            <div class="whether">
-              <img src="assets/images/rain.png" alt="" class="whether-icon">
-              <h1 class="temp">22c</h1>
-              <h2 class="city">panadura</h2>
-              <h3 class="region"></h3>
-              <h4 class="country"></h4>
+            <div class="whether" id="whether1">
+              <img src="assets/images/rain.png" alt="" class="whether-icon" id="whether-icon2">
+              <h1 id="temp-live">22c</h1>
+              <span class="text-Whether" id="text-Whether"></span>
+              <h2 class="city" id="city-live">city is this</h2>
+              <h3 class="region" id="region"></h3>
+              <h4 class="country" id="country"></h4>
               <br><br><br>
-              <div class="details">
+              <div class="details" id="details">
                 <div class="col">
-                  <img src="assets/images/humidity.png" alt="">
+                  <img class="hu-img" src="assets/images/humidity.png" alt="">
                   <div>
-                    <p class="humidity">12%</p>
+                    <p class="humidity" id="humidity">12%</p>
                     <p class="">Humidity</p>
                   </div>
                 </div>
                 <div class="col">
-                  <img src="assets/images/wind.png" alt="">
+                  <img class="hu-img" src="assets/images/wind.png" alt="">
                   <div>
-                    <p class="wind">12kmph</p>
+                    <p class="wind" id="wind">12kmph</p>
                     <p class="">Wind Speed</p>
                   </div>
                 </div>
-                </div>
+              </div>
             </div>
             </div>
           </div>
         </section>
       </section> <br> <br>
-
-
-
-      
-      <section id="foreCast-big">
-        <section class="foreCast" id="day1">
-          <div class="card" style="color: #4B515D; border-radius: 35px;">
-            <div class="card-body p-4">
-  
-              <div class="d-flex">
-                <h6 class="flex-grow-1">Warsaw</h6>
-                <h6>15:07</h6>
-              </div>
-  
-              <div class="d-flex flex-column text-center mt-5 mb-4">
-                <h6 class="display-4 mb-0 font-weight-bold" style="color: #1C2331;"> 13°C </h6>
-                <span class="small" style="color: #868B94">Stormy</span>
-              </div>
-  
-              <div class="d-flex align-items-center">
-                <div class="flex-grow-1" style="font-size: 1rem;">
-                  <div><i class="fas fa-wind fa-fw" style="color: #868B94;"></i> <span class="ms-1"> 40 km/h
-                    </span></div>
-                  <div><i class="fas fa-tint fa-fw" style="color: #868B94;"></i> <span class="ms-1"> 84% </span>
-                  </div>
-                  <div><i class="fas fa-sun fa-fw" style="color: #868B94;"></i> <span class="ms-1"> 0.2h </span>
-                  </div>
-                </div>
-                <div>
-                  <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-weather/ilu1.webp"
-                    width="100px">
-                </div>
-              </div>
-  
-            </div>
+      <section >
+        <div>
+          <h2>Today Whether</h2>
+        </div>
+        <div data-aos="zoom-out-up"  class="hours-sec" >
+          <div class="hour-whther" >
+            <h2 class="hour" id="">00 A.M</h2>
+            <img class="img-24" src="" alt="">
+            <h1 class="tempreture">23</h1> <br>
           </div>
-        </section>
-
-        <section class="foreCast" id="day2">
-          <div class="card" style="color: #4B515D; border-radius: 35px;">
-            <div class="card-body p-4">
-  
-              <div class="d-flex">
-                <h6 class="flex-grow-1">Warsaw</h6>
-                <h6>15:07</h6>
-              </div>
-  
-              <div class="d-flex flex-column text-center mt-5 mb-4">
-                <h6 class="display-4 mb-0 font-weight-bold" style="color: #1C2331;"> 13°C </h6>
-                <span class="small" style="color: #868B94">Stormy</span>
-              </div>
-  
-              <div class="d-flex align-items-center">
-                <div class="flex-grow-1" style="font-size: 1rem;">
-                  <div><i class="fas fa-wind fa-fw" style="color: #868B94;"></i> <span class="ms-1"> 40 km/h
-                    </span></div>
-                  <div><i class="fas fa-tint fa-fw" style="color: #868B94;"></i> <span class="ms-1"> 84% </span>
-                  </div>
-                  <div><i class="fas fa-sun fa-fw" style="color: #868B94;"></i> <span class="ms-1"> 0.2h </span>
-                  </div>
-                </div>
-                <div>
-                  <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-weather/ilu1.webp"
-                    width="100px">
-                </div>
-              </div>
-  
-            </div>
+          <div class="hour-whther" id="hour-whther04">
+            <h2 class="hour4" id="">04 A.M</h2>
+            <img class="img-04" src="" alt="">
+            <h1 class="tempreture04">23</h1> <br>
           </div>
-        </section>
-
-        <section class="foreCast" id="day3">
-          <div class="card" style="color: #4B515D; border-radius: 35px;">
-            <div class="card-body p-4">
-  
-              <div class="d-flex">
-                <h6 class="flex-grow-1">Warsaw</h6>
-                <h6>15:07</h6>
-              </div>
-  
-              <div class="d-flex flex-column text-center mt-5 mb-4">
-                <h6 class="display-4 mb-0 font-weight-bold" style="color: #1C2331;"> 13°C </h6>
-                <span class="small" style="color: #868B94">Stormy</span>
-              </div>
-  
-              <div class="d-flex align-items-center">
-                <div class="flex-grow-1" style="font-size: 1rem;">
-                  <div><i class="fas fa-wind fa-fw" style="color: #868B94;"></i> <span class="ms-1"> 40 km/h
-                    </span></div>
-                  <div><i class="fas fa-tint fa-fw" style="color: #868B94;"></i> <span class="ms-1"> 84% </span>
-                  </div>
-                  <div><i class="fas fa-sun fa-fw" style="color: #868B94;"></i> <span class="ms-1"> 0.2h </span>
-                  </div>
-                </div>
-                <div>
-                  <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-weather/ilu1.webp"
-                    width="100px">
-                </div>
-              </div>
-  
-            </div>
+          <div animate__bounceInRight class="hour-whther" id="hour-whther08">
+            <h2 class="hour08" id="">08 A.M</h2>
+            <img class="img-08" src="" alt="">
+            <h1 class="tempreture08">23</h1> <br>
           </div>
+          <div class="hour-whther" id="hour-whther12">
+            <h2 class="hour12" id="">12 P.M</h2>
+            <img class="img-12" src="" alt="">
+            <h1 class="tempreture12">23</h1> <br>
+          </div>
+          <div class="hour-whther" id="hour-whther16">
+            <h2 class="hour16" id="">04 P.M</h2>
+            <img class="img-16" src="" alt="">
+            <h1 class="tempreture16">23</h1> <br>
+          </div>
+          <div animate__bounceInRight class="hour-whther" id="hour-whther20">
+            <h2 class="hour20" id="">08 P.M</h2>
+            <img class="img-20" src="" alt="">
+            <h1 class="tempreture20">23</h1> <br>
+          </div>
+        </div>
+        
+        
+      </section>
+      <div class="up-down-btn-div">
+        <button id="forecast-dwn-btn">see forecast whether<img src="assets\icons\down-arrow.png" alt=""></button>
+      <button id="forecast-up-btn"><img src="assets\icons\upload (1).png" alt="">See less</button>
+      </div> <br> <br> <br> <br> 
+      <section >
+        <section class="foreCast-big" id="foreCast-big1">
+          <section class="foreCast" id="day1">
+            <div class="card" style="color: #4B515D; border-radius: 35px;">
+              <div class="card-body p-4">
+                  <div class="d-flex">
+                    <h6 class="flex-grow-1 date1">Warsaw</h6>
+                    <h6 class="day1">15:07</h6>
+                 </div>
+                  <div class="d-flex flex-column text-center mt-5 mb-4">
+                    <h6 id="day1-temp" class="display-4 mb-0 font-weight-bold" style="color: #1C2331;"> 13°C </h6>
+                    <span id="day1-whet" class="small" style="color: #868B94">Stormy</span>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <div class="flex-grow-1" style="font-size: 1rem;">
+                      <div><i class="fas fa-wind fa-fw" style="color: #868B94;"></i> <span id="day1-wind" class="ms-1"> 40 km/h
+                      </span></div>
+                      <div><i class="fas fa-tint fa-fw" style="color: #868B94;"></i> <span id="day1-hum" class="ms-1"> 84% </span>
+                      </div>
+                    </div>
+                  <div>
+                    <img class="day1-img" src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-weather/ilu1.webp"
+                      width="100px">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+  
+          <section class="foreCast" id="day2">
+            <div class="card" style="color: #4B515D; border-radius: 35px;">
+              <div class="card-body p-4">
+                  <div class="d-flex">
+                    <h6 class="flex-grow-1 date2">Warsaw</h6>
+                    <h6 class="day2">15:07</h6>
+                 </div>
+                  <div class="d-flex flex-column text-center mt-5 mb-4">
+                    <h6 id="day2-temp" class="display-4 mb-0 font-weight-bold" style="color: #1C2331;"> 13°C </h6>
+                    <span id="day2-whet" class="small" style="color: #868B94">Stormy</span>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <div class="flex-grow-1" style="font-size: 1rem;">
+                      <div><i class="fas fa-wind fa-fw" style="color: #868B94;"></i> <span id="day2-wind" class="ms-1"> 40 km/h
+                      </span></div>
+                      <div><i class="fas fa-tint fa-fw" style="color: #868B94;"></i> <span id="day2-hum" class="ms-1"> 84% </span>
+                      </div>
+                    </div>
+                  <div>
+                    <img class="day2-img" src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-weather/ilu1.webp"
+                      width="100px">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+  
+          <section class="foreCast" id="day3">
+            <div class="card" style="color: #4B515D; border-radius: 35px;">
+              <div class="card-body p-4">
+                  <div class="d-flex">
+                  <h6 class="flex-grow-1">Warsaw</h6>
+                  <h6>15:07</h6>
+                 </div>
+                  <div class="d-flex flex-column text-center mt-5 mb-4">
+                    <h6 class="display-4 mb-0 font-weight-bold" style="color: #1C2331;"> 13°C </h6>
+                    <span class="small" style="color: #868B94">Stormy</span>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <div class="flex-grow-1" style="font-size: 1rem;">
+                      <div><i class="fas fa-wind fa-fw" style="color: #868B94;"></i> <span class="ms-1"> 40 km/h
+                      </span></div>
+                      <div><i class="fas fa-tint fa-fw" style="color: #868B94;"></i> <span class="ms-1"> 84% </span>
+                      </div>
+                      <div><i class="fas fa-sun fa-fw" style="color: #868B94;"></i> <span class="ms-1"> 0.2h </span>
+                      </div>
+                    </div>
+                  <div>
+                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-weather/ilu1.webp"
+                      width="100px">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </section> <br> <br> <br> <br>
+  
+        <section class="foreCast-big" id="foreCast-big2">
+          <section class="foreCast" id="day4">
+            <div class="card" style="color: #4B515D; border-radius: 35px;">
+              <div class="card-body p-4">
+                  <div class="d-flex">
+                  <h6 class="flex-grow-1 date4">Warsaw</h6>
+                  <h6 class="day4">15:07</h6>
+                 </div>
+                  <div class="d-flex flex-column text-center mt-5 mb-4">
+                    <h6 id="day4-temp" class="display-4 mb-0 font-weight-bold" style="color: #1C2331;"> 13°C </h6>
+                    <span id="day4-whet" class="small" style="color: #868B94">Stormy</span>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <div class="flex-grow-1" style="font-size: 1rem;">
+                      <div><i class="fas fa-wind fa-fw" style="color: #868B94;"></i> <span id="day4-wind" class="ms-1"> 40 km/h
+                      </span></div>
+                      <div><i class="fas fa-tint fa-fw" style="color: #868B94;"></i> <span  id="day4-hum"class="ms-1"> 84% </span>
+                      </div>
+                      <div><i class="fas fa-sun fa-fw" style="color: #868B94;"></i> <span class="ms-1"> 0.2h </span>
+                      </div>
+                    </div>
+                  <div>
+                    <img class="day4-img" src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-weather/ilu1.webp"
+                      width="100px">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+  
+          <section class="foreCast" id="day5">
+            <div class="card" style="color: #4B515D; border-radius: 35px;">
+              <div class="card-body p-4">
+                  <div class="d-flex">
+                  <h6 id="date5" class="flex-grow-1 date5">Warsaw</h6>
+                  <h6  class="day5">15:07</h6>
+                 </div>
+                  <div class="d-flex flex-column text-center mt-5 mb-4">
+                    <h6 id="day5-temp" class="display-4 mb-0 font-weight-bold" style="color: #1C2331;"> 13°C </h6>
+                    <span id="day5-whet" class="small" style="color: #868B94">Stormy</span>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <div class="flex-grow-1" style="font-size: 1rem;">
+                      <div><i class="fas fa-wind fa-fw" style="color: #868B94;"></i> <span id="day5-wind" class="ms-1"> 40 km/h
+                      </span></div>
+                      <div><i class="fas fa-tint fa-fw" style="color: #868B94;"></i> <span  id="day5-hum"class="ms-1"> 84% </span>
+                      </div>
+                      <div><i class="fas fa-sun fa-fw" style="color: #868B94;"></i> <span class="ms-1"> 0.2h </span>
+                      </div>
+                    </div>
+                  <div>
+                    <img class="day5-img" src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-weather/ilu1.webp"
+                      width="100px">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+  
+          <section class="foreCast" id="day6">
+            <div class="card" style="color: #4B515D; border-radius: 35px;">
+              <div class="card-body p-4">
+                  <div class="d-flex">
+                  <h6 class="flex-grow-1 date6">Warsaw</h6>
+                  <h6 class="day6">15:07</h6>
+                 </div>
+                  <div class="d-flex flex-column text-center mt-5 mb-4">
+                    <h6 id="day6-temp" class="display-4 mb-0 font-weight-bold" style="color: #1C2331;"> 13°C </h6>
+                    <span id="day6-whet" class="small" style="color: #868B94">Stormy</span>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <div class="flex-grow-1" style="font-size: 1rem;">
+                      <div><i class="fas fa-wind fa-fw" style="color: #868B94;"></i> <span id="day6-wind" class="ms-1"> 40 km/h
+                      </span></div>
+                      <div><i class="fas fa-tint fa-fw" style="color: #868B94;"></i> <span  id="day6-hum"class="ms-1"> 84% </span>
+                      </div>
+                      <div><i class="fas fa-sun fa-fw" style="color: #868B94;"></i> <span class="ms-1"> 0.2h </span>
+                      </div>
+                    </div>
+                  <div>
+                    <img class="day6-img" src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-weather/ilu1.webp"
+                      width="100px">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
         </section>
       </section>
     </main>
@@ -201,5 +329,10 @@
     <script src="assets/jQuary/jquery-3.6.4.min.js"></script>
     <script src="js/main.js"></script>
     
+    <!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 </body>
 </html>
