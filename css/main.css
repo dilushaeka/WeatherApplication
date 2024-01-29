@@ -8,7 +8,7 @@
 center{
     border-top-left-radius: 7rem;
     border-top-right-radius: 7rem; 
-    width: 100wv; 
+    /*width: 100vw;*/
 }
 
 button:hover{
@@ -62,6 +62,7 @@ header{
 #city{
     width: fit-content;
     height: fit-content;
+    margin-right: 10px;
 }
 
 
@@ -79,7 +80,7 @@ body{
 
 /*====== main whether sec ======*/
 .main-whether-sec{
-    display: flex;
+    /*display: flex;*/
     justify-content: space-evenly;
     /* background-image: url("../assets/gif/darkCloud.gif");
     background-size: cover; */
@@ -94,13 +95,13 @@ body{
 .whether{
     display: flex;
     justify-content:center;
-    flex-direction: column;
+    flex-direction: row;
     height: fit-content;
-    width: 30vw;
+    width: fit-content;
     border-radius: 3rem;
     left: 100px;
     padding: 2rem;
-    margin: 6rem;
+    margin: 2rem;
     background-color: blueviolet;
 }
 .whether:hover{
@@ -163,6 +164,7 @@ body{
 }
 
 .details{
+
     display: flex;
     flex-direction: row;
     align-items:flex-start;
@@ -240,7 +242,7 @@ footer{
   }
 
   .card:hover{
-    background-color: gray;
+    background-color: #d5bebe;
   }
 
   /*=============== media ==================*/
@@ -260,19 +262,25 @@ footer{
         display: grid;
         grid-template-columns: 300px 300px;
     }
-    
-.details {
-    flex-direction: column;
+      .details {
+          flex-direction: column;
+      }
   }
-}
 
   @media (max-width: 785px) {
+
+      header{
+          width: 100%;
+      }
     body{
         background-color: aqua;
     }
+
+
     .whether{
-        padding: 4px 10px 20px 10px;
-        width: 200px;
+        padding: 4px 10px 20px 0px;
+        width:fit-content;
+        left: 200px;
     }
     .text-Whether{
         width: fit-content;
@@ -297,7 +305,8 @@ footer{
   @media (max-width: 575px) {
 
     header{
-        width: 600px;
+        width:1150px;
+        color: #0dcaf0;
     }
     .hours-sec{
         display: flex;
@@ -322,9 +331,11 @@ footer{
 
   @media (min-width: 265px) {
     .whether-sec{
-        width: 250px;
-        margin-left: 100px;
+        width: fit-content;
+        margin-left: 30px;
     }
+
+
 
     
   }
